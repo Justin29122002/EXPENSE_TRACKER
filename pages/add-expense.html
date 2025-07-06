@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Expense - Table Format</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="add-expense-table-container">
+    <h2>Track Every Expense</h2>
+    <form class="expense-table-form">
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody id="expense-rows">
+  <!-- Row 1 -->
+  <tr id="row-1">
+    <td>1</td>
+    <td><input type="date" name="date1" onchange="fillDay(this, 'day1')" required /></td>
+    <td><input type="text" name="day1" id="day1" readonly /></td>
+    <td>
+      <select name="category1">
+        <option value="Food">Food / Groceries</option>
+        <option value="Transport">Transport / Travel</option>
+        <option value="Utilities">Utilities (Electricity, Water, Gas)</option>
+        <option value="Rent">Rent / Mortgage</option>
+        <option value="Internet">Mobile / Internet</option>
+        <option value="Medical">Medical / Healthcare</option>
+        <option value="Insurance">Insurance</option>
+        <option value="Shopping">Shopping / Clothing</option>
+        <option value="Entertainment">Entertainment / Subscriptions</option>
+        <option value="Dining">Dining Out / Restaurants</option>
+        <option value="Fitness">Fitness / Gym</option>
+        <option value="Grooming">Beauty / Grooming</option>
+        <option value="Gifts">Gifts & Donations</option>
+        <option value="Tuition">Tuition Fees</option>
+        <option value="Books">Books / Courses</option>
+        <option value="Stationery">Stationery / Supplies</option>
+        <option value="Office">Office Supplies</option>
+        <option value="Client">Client Meetings</option>
+        <option value="BusinessTravel">Business Travel</option>
+        <option value="Fuel">Fuel</option>
+        <option value="VehicleRepair">Vehicle Maintenance / Repairs</option>
+        <option value="Toll">Parking / Toll</option>
+        <option value="Loan">Loan Repayment</option>
+        <option value="CreditCard">Credit Card Payment</option>
+        <option value="Savings">Savings / Investments</option>
+        <option value="EMI">EMI</option>
+        <option value="Pets">Pets</option>
+        <option value="Events">Events / Celebrations</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Other">Other</option>
+      </select>
+    </td>
+    <td><input type="number" name="quantity1" min="1" value="1" /></td>
+    <td><input type="number" name="amount1" /></td>
+    <td><input type="text" name="note1" /></td>
+  </tr>
+
+  <!-- Copy Row 1 and change only the numbers -->
+  <!-- Row 2 -->
+  <tr id="row-2">
+    <td>2</td>
+    <td><input type="date" name="date2" onchange="fillDay(this, 'day2')" required /></td>
+    <td><input type="text" name="day2" id="day2" readonly /></td>
+    <td>
+      <select name="category2"><option value="Food">Food / Groceries</option>
+        <option value="Transport">Transport / Travel</option>
+        <option value="Utilities">Utilities (Electricity, Water, Gas)</option>
+        <option value="Rent">Rent / Mortgage</option>
+        <option value="Internet">Mobile / Internet</option>
+        <option value="Medical">Medical / Healthcare</option>
+        <option value="Insurance">Insurance</option>
+        <option value="Shopping">Shopping / Clothing</option>
+        <option value="Entertainment">Entertainment / Subscriptions</option>
+        <option value="Dining">Dining Out / Restaurants</option>
+        <option value="Fitness">Fitness / Gym</option>
+        <option value="Grooming">Beauty / Grooming</option>
+        <option value="Gifts">Gifts & Donations</option>
+        <option value="Tuition">Tuition Fees</option>
+        <option value="Books">Books / Courses</option>
+        <option value="Stationery">Stationery / Supplies</option>
+        <option value="Office">Office Supplies</option>
+        <option value="Client">Client Meetings</option>
+        <option value="BusinessTravel">Business Travel</option>
+        <option value="Fuel">Fuel</option>
+        <option value="VehicleRepair">Vehicle Maintenance / Repairs</option>
+        <option value="Toll">Parking / Toll</option>
+        <option value="Loan">Loan Repayment</option>
+        <option value="CreditCard">Credit Card Payment</option>
+        <option value="Savings">Savings / Investments</option>
+        <option value="EMI">EMI</option>
+        <option value="Pets">Pets</option>
+        <option value="Events">Events / Celebrations</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Other">Other</option>
+      </select>
+    </td>
+    <td><input type="number" name="quantity2" min="1" value="1" /></td>
+    <td><input type="number" name="amount2" /></td>
+    <td><input type="text" name="note2" /></td>
+  </tr>
+
+  <!-- Row 3 -->
+  <tr id="row-3">
+    <td>3</td>
+    <td><input type="date" name="date3" onchange="fillDay(this, 'day3')" required /></td>
+    <td><input type="text" name="day3" id="day3" readonly /></td>
+    <td>
+      <select name="category3"><option value="Food">Food / Groceries</option>
+        <option value="Transport">Transport / Travel</option>
+        <option value="Utilities">Utilities (Electricity, Water, Gas)</option>
+        <option value="Rent">Rent / Mortgage</option>
+        <option value="Internet">Mobile / Internet</option>
+        <option value="Medical">Medical / Healthcare</option>
+        <option value="Insurance">Insurance</option>
+        <option value="Shopping">Shopping / Clothing</option>
+        <option value="Entertainment">Entertainment / Subscriptions</option>
+        <option value="Dining">Dining Out / Restaurants</option>
+        <option value="Fitness">Fitness / Gym</option>
+        <option value="Grooming">Beauty / Grooming</option>
+        <option value="Gifts">Gifts & Donations</option>
+        <option value="Tuition">Tuition Fees</option>
+        <option value="Books">Books / Courses</option>
+        <option value="Stationery">Stationery / Supplies</option>
+        <option value="Office">Office Supplies</option>
+        <option value="Client">Client Meetings</option>
+        <option value="BusinessTravel">Business Travel</option>
+        <option value="Fuel">Fuel</option>
+        <option value="VehicleRepair">Vehicle Maintenance / Repairs</option>
+        <option value="Toll">Parking / Toll</option>
+        <option value="Loan">Loan Repayment</option>
+        <option value="CreditCard">Credit Card Payment</option>
+        <option value="Savings">Savings / Investments</option>
+        <option value="EMI">EMI</option>
+        <option value="Pets">Pets</option>
+        <option value="Events">Events / Celebrations</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Other">Other</option>
+      </select>
+    </td>
+    <td><input type="number" name="quantity3" min="1" value="1" /></td>
+    <td><input type="number" name="amount3" /></td>
+    <td><input type="text" name="note3" /></td>
+  </tr>
+
+  <!-- Row 4 -->
+  <tr id="row-4">
+    <td>4</td>
+    <td><input type="date" name="date4" onchange="fillDay(this, 'day4')" required /></td>
+    <td><input type="text" name="day4" id="day4" readonly /></td>
+    <td>
+      <select name="category4"><option value="Food">Food / Groceries</option>
+        <option value="Transport">Transport / Travel</option>
+        <option value="Utilities">Utilities (Electricity, Water, Gas)</option>
+        <option value="Rent">Rent / Mortgage</option>
+        <option value="Internet">Mobile / Internet</option>
+        <option value="Medical">Medical / Healthcare</option>
+        <option value="Insurance">Insurance</option>
+        <option value="Shopping">Shopping / Clothing</option>
+        <option value="Entertainment">Entertainment / Subscriptions</option>
+        <option value="Dining">Dining Out / Restaurants</option>
+        <option value="Fitness">Fitness / Gym</option>
+        <option value="Grooming">Beauty / Grooming</option>
+        <option value="Gifts">Gifts & Donations</option>
+        <option value="Tuition">Tuition Fees</option>
+        <option value="Books">Books / Courses</option>
+        <option value="Stationery">Stationery / Supplies</option>
+        <option value="Office">Office Supplies</option>
+        <option value="Client">Client Meetings</option>
+        <option value="BusinessTravel">Business Travel</option>
+        <option value="Fuel">Fuel</option>
+        <option value="VehicleRepair">Vehicle Maintenance / Repairs</option>
+        <option value="Toll">Parking / Toll</option>
+        <option value="Loan">Loan Repayment</option>
+        <option value="CreditCard">Credit Card Payment</option>
+        <option value="Savings">Savings / Investments</option>
+        <option value="EMI">EMI</option>
+        <option value="Pets">Pets</option>
+        <option value="Events">Events / Celebrations</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Other">Other</option>
+      </select>
+    </td>
+    <td><input type="number" name="quantity4" min="1" value="1" /></td>
+    <td><input type="number" name="amount4" /></td>
+    <td><input type="text" name="note4" /></td>
+  </tr>
+
+  <!-- Row 5 -->
+  <tr id="row-5">
+    <td>5</td>
+    <td><input type="date" name="date5" onchange="fillDay(this, 'day5')" required /></td>
+    <td><input type="text" name="day5" id="day5" readonly /></td>
+    <td>
+      <select name="category5"><option value="Food">Food / Groceries</option>
+        <option value="Transport">Transport / Travel</option>
+        <option value="Utilities">Utilities (Electricity, Water, Gas)</option>
+        <option value="Rent">Rent / Mortgage</option>
+        <option value="Internet">Mobile / Internet</option>
+        <option value="Medical">Medical / Healthcare</option>
+        <option value="Insurance">Insurance</option>
+        <option value="Shopping">Shopping / Clothing</option>
+        <option value="Entertainment">Entertainment / Subscriptions</option>
+        <option value="Dining">Dining Out / Restaurants</option>
+        <option value="Fitness">Fitness / Gym</option>
+        <option value="Grooming">Beauty / Grooming</option>
+        <option value="Gifts">Gifts & Donations</option>
+        <option value="Tuition">Tuition Fees</option>
+        <option value="Books">Books / Courses</option>
+        <option value="Stationery">Stationery / Supplies</option>
+        <option value="Office">Office Supplies</option>
+        <option value="Client">Client Meetings</option>
+        <option value="BusinessTravel">Business Travel</option>
+        <option value="Fuel">Fuel</option>
+        <option value="VehicleRepair">Vehicle Maintenance / Repairs</option>
+        <option value="Toll">Parking / Toll</option>
+        <option value="Loan">Loan Repayment</option>
+        <option value="CreditCard">Credit Card Payment</option>
+        <option value="Savings">Savings / Investments</option>
+        <option value="EMI">EMI</option>
+        <option value="Pets">Pets</option>
+        <option value="Events">Events / Celebrations</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Other">Other</option>
+      </select>
+    </td>
+    <td><input type="number" name="quantity5" min="1" value="1" /></td>
+    <td><input type="number" name="amount5" /></td>
+    <td><input type="text" name="note5" /></td>
+  </tr>
+
+  <!-- Row 6 -->
+  <tr id="row-6">
+    <td>6</td>
+    <td><input type="date" name="date6" onchange="fillDay(this, 'day6')" required /></td>
+    <td><input type="text" name="day6" id="day6" readonly /></td>
+    <td>
+      <select name="category6"><option value="Food">Food / Groceries</option>
+        <option value="Transport">Transport / Travel</option>
+        <option value="Utilities">Utilities (Electricity, Water, Gas)</option>
+        <option value="Rent">Rent / Mortgage</option>
+        <option value="Internet">Mobile / Internet</option>
+        <option value="Medical">Medical / Healthcare</option>
+        <option value="Insurance">Insurance</option>
+        <option value="Shopping">Shopping / Clothing</option>
+        <option value="Entertainment">Entertainment / Subscriptions</option>
+        <option value="Dining">Dining Out / Restaurants</option>
+        <option value="Fitness">Fitness / Gym</option>
+        <option value="Grooming">Beauty / Grooming</option>
+        <option value="Gifts">Gifts & Donations</option>
+        <option value="Tuition">Tuition Fees</option>
+        <option value="Books">Books / Courses</option>
+        <option value="Stationery">Stationery / Supplies</option>
+        <option value="Office">Office Supplies</option>
+        <option value="Client">Client Meetings</option>
+        <option value="BusinessTravel">Business Travel</option>
+        <option value="Fuel">Fuel</option>
+        <option value="VehicleRepair">Vehicle Maintenance / Repairs</option>
+        <option value="Toll">Parking / Toll</option>
+        <option value="Loan">Loan Repayment</option>
+        <option value="CreditCard">Credit Card Payment</option>
+        <option value="Savings">Savings / Investments</option>
+        <option value="EMI">EMI</option>
+        <option value="Pets">Pets</option>
+        <option value="Events">Events / Celebrations</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Other">Other</option>
+      </select>
+    </td>
+    <td><input type="number" name="quantity6" min="1" value="1" /></td>
+    <td><input type="number" name="amount6" /></td>
+    <td><input type="text" name="note6" /></td>
+  </tr>
+</tbody>
+
+      </table>
+<!-- Add Row Button -->
+      <button type="button" onclick="addNewRow()">➕ Add Row</button>
+
+      <!-- Submit Button -->
+      <button type="button" id="submit-btn" onclick="saveExpensesToFirebase()">Submit</button>
+    </form>
+  </div>
+
+  <!-- Your Firebase-saving logic will be in script.js or add.js -->
+  <script src="../js/add.js"></script>
+</body>
+</html>

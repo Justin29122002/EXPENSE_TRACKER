@@ -1,0 +1,40 @@
+<div class="view-container">
+  <aside class="sidebar">
+    <h3>View By</h3>
+    <ul>
+      <li onclick="loadView('daily')">Daily</li>
+      <li onclick="loadView('weekly')">Weekly</li>
+      <li onclick="loadView('monthly')">Monthly</li>
+      <li onclick="loadView('yearly')">Yearly</li>
+    </ul>
+    
+
+    <h3>Chart Type</h3>
+    <ul>
+      <li onclick="changeChart('table')">Table</li>
+      <li onclick="changeChart('pie')">Pie Chart</li>
+      <li onclick="changeChart('bar')">Bar Chart</li>
+      <li onclick="changeChart('line')">Line Chart</li>
+    </ul>
+  </aside>
+
+  <main class="view-content">
+    <div id="filter-section">
+  <label id="filter-label">Select Date:</label>
+  <input id="filter-input" type="date" />
+  <button onclick="applyFilter()">Apply</button>
+</div>
+    <div id="chart-title">Daily - Table View</div>
+    <div id="chart-area">
+      <table class="expense-table" id="data-table">
+        <thead>
+          <tr>
+            <th>Date</th><th>Category</th><th>Amount</th><th>Note</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+      <canvas id="chart-canvas" style="display:none;" width="400" height="200"></canvas>
+    </div>
+  </main>
+</div>

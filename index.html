@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expense Tracker</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/report.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Miltonian&family=Ribeye&family=Tapestry&display=swap" rel="stylesheet" />
+
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Firebase SDKs (Compat version) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <script>
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDbanur_ObMIfKTo38ZLQVJgvLSh-EbLkE",
+      authDomain: "expensetracker-53cca.firebaseapp.com",
+      projectId: "expensetracker-53cca",
+      storageBucket: "expensetracker-53cca.appspot.com",
+      messagingSenderId: "389782691794",
+      appId: "1:389782691794:web:fa9b6bbd02ebf4d1cdf20b"
+    };
+
+    // Initialize Firebase and Firestore
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+</head>
+<body>
+
+  <!-- Top Section with Title and Navigation -->
+  <div class="top-section">
+    <h1><span>EXPENSE</span> TRACKER</h1>
+    <nav>
+      <a href="#" onclick="loadPage('home.html')">Home</a>
+      <a href="#" onclick="loadPage('add-expense.html')">Add Expense</a>
+      <a href="#" onclick="loadPage('view.html')">View Expenses</a>
+      <a href="#" onclick="loadPage('report.html')">Reports</a>
+    </nav>
+  </div>
+
+  <!-- Dynamic Content Loads Here -->
+  <main id="content"></main>
+
+  <!-- Your Main JS Files -->
+  <script src="js/script.js"></script>
+  <script src="js/report.js"></script>
+
+</body>
+</html>

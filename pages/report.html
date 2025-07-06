@@ -1,0 +1,29 @@
+<div class="report-container">
+  <div class="report-left">
+    <h2>Set Monthly Budget</h2>
+    <input type="number" id="budget-input" placeholder="Enter your budget ₹" />
+    <button onclick="calculateBudget()">Calculate</button>
+    <div id="budget-result"></div>
+
+    <div class="report-options">
+      <label for="report-type">View Report By:</label>
+      <select id="report-type" onchange="updateCustomReport()">
+        <option value="category">Category (Pie)</option>
+        <option value="month">Month-wise (Bar)</option>
+        <option value="date">Date-wise (Line)</option>
+        <option value="year">Yearly (Bar)</option>
+      </select>
+    </div>
+
+    <h2 style="margin-top: 20px;">Download Report</h2>
+    <button onclick="downloadPDF()">Download as PDF</button>
+    <button onclick="downloadExcel()">Download as Excel</button>
+
+    <h2 style="margin-top: 20px;">Insight</h2>
+    <p id="comparison-insights">Loading insight...</p>
+  </div>
+
+  <div class="report-right">
+    <canvas id="report-chart"></canvas> <!-- Only one canvas here -->
+  </div>
+</div>
